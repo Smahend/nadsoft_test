@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./effects.css">
+
+    <script>
+        const countEl = document.getElementById('count');
+
+
+
+        function updateVisitCount() {
+            fetch('http://api.countapi.xyz/update/mahendra.mahhi/m24/?amount=+1')
+                .then(res => res.json())
+                .then(res => {
+                    countEl.innerHTML = res.value;
+                });
+        }
+        const countEle = document.getElementById('count1');
+        function updateVisitCount() {
+            fetch('http://api.countapi.xyz/update/mahendra.mahhi/m24/?amount=+5')
+                .then(res => res.json())
+                .then(res => {
+                    countEle.innerHTML = res.value;
+                });
+        }
+        const countElem = document.getElementById('count2');
+        function updateVisitCount() {
+            fetch('http://api.countapi.xyz/update/mahendra.mahhi/m24/?amount=+10')
+                .then(res => res.json())
+                .then(res => {
+                    countElem.innerHTML = res.value;
+                });
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <header class=" row border border-secondary">
+        <div class="col p-2 m-2">
+            <h2>realfunnel</h2>
+
+        </div>
+        <div class="col p-2 m-2">
+            <input type="search" placeholder="Search" class="border" id="search" />
+        </div>
+        <div class="col p-2 m-2">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Create Profile
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">LogIn</button>
+                    <button class="dropdown-item" type="button">Register User</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <main class="row">
+            <div class="col-2 border border-secondary " id="sidebar">
+                <button class="border-0">
+                    <span class="bi bi-house-fill"></span>
+                    OVERVIEW
+                </button>
+                <button class="border-0">
+                    <span class="bi bi-funnel"></span>
+                    FUNNELS
+                </button>
+                <button class="border-0">
+                    <span class="bi bi-wallet2"></span>
+                    MERCHANTS
+                </button>
+               <button class="border-0">
+                <span class=""></span>
+                REPORTS
+               </button>
+                <button class="border-0">
+                    <span class=""></span>
+                    CAMPAIGN
+                </button>
+                <button class="border-0">
+                    <span class="bi bi-calculator-fill"></span>
+                    CALCULATOR
+                </button>
+            </div>
+            <div class="col-10">
+                <div class="row border">
+                    <div class="col p-2 m-2">
+                        <select>
+                            <option>Home</option>
+                            <option>About</option>
+                            <option>Contact</option>
+                        </select>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <select>
+                            <option>Home</option>
+                            <option>About</option>
+                            <option>Contact</option>
+                        </select>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <button class="btn btn-primary">Button</button>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col p-2 m-2">
+                        <p id="count">0</p>
+                        <h3>Visitor</h3>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <p id="count1">0</p>
+                        <h3>Conversion</h3>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <p id="count2"><span>$</span>0</p>
+                        <h3>Amount</h3>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <p id="count">0</p>
+                        <h3>sell</h3>
+                    </div>
+                    <div class="col p-2 m-2">
+                        <p id="count">0</p>
+                        <h3>AOV</h3>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <h4>Header 1</h4>
+                            <img class="d-block w-50" src="..." alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <h4>Header 2</h4>
+                            <img class="d-block w-50" src="..." alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <h4>Header 3</h4>
+                            <img class="d-block w-50" src="..." alt="Third slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
